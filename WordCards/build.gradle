@@ -1,0 +1,25 @@
+buildscript {
+    repositories {
+        mavenCentral()
+        jcenter()
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:2.3.0'
+    }
+}
+apply plugin: 'com.android.application'
+
+dependencies {
+    compile files('libs/android-support-v4.jar')
+    compile files('libs/microsoft-translator-java-api-0.6.2.jar')
+}
+
+android {
+    compileSdkVersion 17
+    buildToolsVersion '25.0.0'
+
+    defaultConfig {
+        minSdkVersion 11
+        targetSdkVersion 17
+    }
+}
